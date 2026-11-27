@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button><a href="dash.html">Dashboard</a></button>
+        <button><a href="index.html">Results</a></button>
+    </nav>
+    <header class="page-header">
+        <h1>Student Result Management System</h1>
+        <p>Enter your academic details and semester scores to calculate your final result</p>
+    </header>
+
+    <main class="container">
+        <form id="resultForm" class="card">
+            <div class="form-group">
+                <label for="fullName">1. Student Full Name:</label>
+                <input type="text" id="fullName" placeholder="e.g., John Snow">
+            </div>
+
+            <div class="form-group">
+                <label for="matricNumber">2. Matric no:</label>
+                <input type="text" id="matricNumber" placeholder="e.g., CSC/2023/045">
+            </div>
+
+            <div class="form-group">
+                <label for="department">3. Department</label>
+                <select id="department">
+                    <option value="">Select Department</option>
+                    <option value="1">1. Mechanical Engineering</option>
+                    <option value="2">2. Computer Science</option>
+                    <option value="3">3. Electrical Engineering</option>
+                    <option value="4">4. Civil Engineering</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="university">4. University</label>
+                <input type="text" id="university" placeholder="e.g., HKUST">
+            </div>
+
+            <div class="form-group">
+                <label for="firstScore">First Semester Score</label>
+                <input type="text" id="firstScore" placeholder="0 - 100">
+            </div>
+
+            <div class="form-group">
+                <label for="secondScore">Second Semester Score</label>
+                <input type="text" id="secondScore" placeholder="0 - 100">
+            </div>
+
+            <button type="submit" class="btn-submit">Calculate My Result</button>
+        </form>
+
+
+        <div id="resultCard" class="card result-card" style="display: none;">
+            <h2>Academic Result Slip</h2>
+            <p><strong>Full Name:</strong> <span id="resName"></span></p>
+            <p><strong>Matric Number:</strong> <span id="resMatric"></span></p>
+            <p><strong>Department:</strong> <span id="resDept"></span></p>
+            <p><strong>University:</strong> <span id="resUni"></span></p>
+            <hr>
+            <p><strong>Total Score:</strong><span id="resTotal"> /200</span></p>
+            <p><strong>Average Score:</strong><span id="resAverage"> %</span></p>
+            <p><strong>Grade:</strong><span id="resGrade"></span> (<span id="resRemark"></span>)</p>
+            <p><strong>Status:</strong><span id="resStatus" class="status-badge"></span></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
